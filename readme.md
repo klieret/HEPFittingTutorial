@@ -3,7 +3,7 @@
 
 Jupyter notebooks preview is available [here](https://nbviewer.jupyter.org/github/klieret/HEPFittingTutorial/tree/master/examples/jupyter_notebooks/).
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/klieret/HEPFittingTutorial/master?filepath=examples%2Fjupyter_notebooks)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nikoladze/HEPFittingTutorial/master?filepath=examples%2Fjupyter_notebooks)
 
 ## Contents
 
@@ -11,5 +11,4 @@ Jupyter notebooks preview is available [here](https://nbviewer.jupyter.org/githu
 * Fitting polynomials to points using ``np.polyfit``
 * Fitting arbitrary functions to points using ``scipy.optimize.curve_fit``
 * Template fits using ``pyroofit``
-
-
+* Histogram template fits using ``pyhf``
