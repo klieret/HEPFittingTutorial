@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - conda-ecosystem-user-package-isolation
   - root
   - pip:
       - jupyter
