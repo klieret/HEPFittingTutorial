@@ -171,3 +171,47 @@ order of `2.977`, for 14 we get around `3.147`.
 
 The signal would not count as excluded since we usually choose `CLs<0.05` as
 criterion for exclusion.
+
+### Exercise 7d
+
+We get an upper limit of around 2 events, e.g. with this scan:
+
+```
+model_b0 = pyhf.simplemodels.hepdata_like(
+    signal_data=[1], bkg_data=[1e-10], bkg_uncerts=[0]
+)
+pyhf.infer.intervals.upperlimit([0] + model_b0.config.auxdata, model_b0, np.linspace(0, 5, 100))
+```
+
+That is of course an extreme case of a low sample size (0), so the asymptotic
+limit does not hold anymore. This limit should be pretty precisely 3 events
+since the poisson distribution's probability mass function is pretty close to
+`0.05` at 0 observed events for $\lambda=3$:
+
+```
+stats.poisson.pmf(0, 3)
+```
+
+In other words: for random events sampled from a poisson distribution with
+$\lambda = 3$ we would get 0 events in 5% of the cases.
+
+We can reproduce this with `pyhf` when we use the toybased calculator. Running
+the following should give a p-value close to 0.05:
+
+```
+pyhf.infer.hypotest(
+    3,
+    [0] + model_b0.config.auxdata,
+    model_b0,
+    test_stat="qtilde",
+    return_tail_probs=True,
+    calctype="toybased"
+)
+```
+
+So, as a rule of thumb: An upper limit on a number of excess events should never
+be smaller than 3!
+
+### Question 7e
+
+The values below the contour (with significance values higher than 1.64) are excluded.
