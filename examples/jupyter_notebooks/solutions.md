@@ -143,3 +143,31 @@ We can't get a perfect fit since we need to fit the real ("actual") data and
 auxiliary data simultaneously. When tuning the individual bin contents to fit
 the real data better we might get larger disagreement describing the auxiliary
 data.
+
+### Exercise 7a
+
+We want to exclude the background only hypothesis, so we test for $\mu=0$.
+
+### Exercise 7b
+
+Either just modify the value of `s` and try out when the significance crosses 3
+sigma or do a systematic scan like the following:
+
+```
+for i in range(7, 20, 1):
+    p = pyhf.infer.hypotest(
+        poi_test=0,
+        data=[i + b] + model.config.auxdata,
+        pdf=model,
+        test_stat="q0"
+    )
+    print(i, pvalue_to_significance(p))
+```
+
+You will see the boundary is at 14 excess events. For 13 we get something in the
+order of `2.977`, for 14 we get around `3.147`.
+
+### Question 7c
+
+The signal would not count as excluded since we usually choose `CLs<0.05` as
+criterion for exclusion.

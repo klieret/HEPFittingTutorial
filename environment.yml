@@ -11,6 +11,6 @@ dependencies:
       - scipy
       - numpy
       - pyroofit
-      - pyhf
+      - pyhf[contrib]
       - iminuit
       - mplhep
