@@ -71,6 +71,16 @@ def line(x, a1, b1, a2, c):
 
 ### Exercise 6a
 
+```
+from scipy.optimize import minimize
+result = minimize(negative_loglikelihood_scipy, (1, 1))
+# or analogous
+result = minimize(negative_loglikelihood_pyhf, (1, 1))
+result.x
+```
+
+### Exercise 6b
+
 Just replace the name of the `"normfactor"` modifier for the seconds sample by
 `mu1`. Then this will become a single parameter, correlated for both samples. So
 `pyhf.infer.mle.fit(data, model)` will also only return one parameter, so
