@@ -56,7 +56,7 @@ pip3 install --user pyroofit pyhf iminuit mplhep
 
 You should then be able to run the examples in a jupyter notebook or in jupyter hub (on Jupyter hub, make sure you use the Belle II Kernel with the latest version).
 
-Note: Some of the packages have stopped supporting `python3.6`, so if you need the latest versions, maybe go for the [Generic installation with conda](#generic)
+Note: Some of the packages have stopped supporting `python3.6`, so if you need the latest versions, maybe go for the [Generic installation with conda](#generic), e.g install Miniconda into your home directory.
 
 #### On gar-ws-etp* (for ATLAS projects)
 
@@ -66,7 +66,7 @@ You can install the packages on top of the ROOT + python3.7 setup:
 module load root/6.20.04_py3.7
 ```
 
-To give newer versions you of python packages you install as a user priority over the setup environment, reset the PYTHONPATH to just contain ROOT
+To give newer versions of python packages you install as a user priority over the system environment, reset the `PYTHONPATH` to just contain ROOT
 
 ```
 export PYTHONPATH=/software/opt/bionic/x86_64/root/6.20.04_py3.7/lib
