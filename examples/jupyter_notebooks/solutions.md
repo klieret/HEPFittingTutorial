@@ -69,6 +69,30 @@ def line(x, a1, b1, a2, c):
     return np.where(x<c, a1 * x + b1, a2 * x +a1 * c + b1 - a2 * c)
 ```
 
+### Exercise from `005_exercise_fitting_with_root.ipynb`
+
+Try Gaussian + Exponential:
+
+```python
+f = ROOT.TF1("f","[0] * expo(1) + gaus(3)", 6, 0, 5)
+```
+
+Test out some initial parameters
+
+```python
+f.SetParameters(100, 1, -1, 100, 3, 0.1)
+f.Draw()
+c1.Draw()
+```
+
+Fit and plot
+
+```python
+datahist.Fit(f)
+datahist.Draw()
+c1.Draw()
+```
+
 ### Exercise 6a
 
 ```
