@@ -128,6 +128,33 @@ datahist.Draw()
 c1.Draw()
 ```
 
+The mass is given by parameter `p4`, the width by parameter `p5`.
+
+Alternative with numpy/scipy:
+
+```
+def f(x, norm, mean, sigma, a, b, c):
+    return norm * scipy.stats.norm.pdf(x, loc=mean, scale=sigma) + c * np.exp(a * x + b)
+```
+
+Try parameters
+
+```
+p0 = (50, 3, 0.1, -1, 0, 200)
+plt.plot(x, f(x, *p0))
+plt.plot(x, y, "k.")
+```
+
+Fit & Plot
+
+```
+popt, pcov = scipy.optimize.curve_fit(f, x, y, p0=p0)
+plt.plot(x, y, "k.")
+plt.plot(x, f(x, *popt))
+```
+
+The mass is given by `popt[1]` and the width by `popt[2]`.
+
 ### Exercise 6a
 
 ```
