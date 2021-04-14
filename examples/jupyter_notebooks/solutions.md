@@ -69,6 +69,41 @@ def line(x, a1, b1, a2, c):
     return np.where(x<c, a1 * x + b1, a2 * x +a1 * c + b1 - a2 * c)
 ```
 
+### Exercise from `004_fitting_with_root.ipynb` - fit a Triangle
+
+You can take inspiration from the triangle function we had in
+`002_fitting_curves_to_points.ipynb`. Just now for ROOT we define our function
+point-wise (instead of on an array), for example:
+
+```python
+def triangle(x, p):
+    a1, b1, a2, c = p[0], p[1], p[2], p[3]
+    if x[0] < c:
+        return a1 * x[0] + b1
+    else:
+        return a2 * x[0] + a1 * c + b1 - a2 * c
+
+# Fit in range (-2, 2) with 4 paramters
+root_triangle = ROOT.TF1("triangle", triangle, -2, 2, 4)
+```
+
+Then play to get some reasonable starting values:
+
+```python
+root_triangle.SetParameters(20, 40, -20, 0)
+histgaus.Draw()
+root_triangle.Draw("same")
+c1.Draw()
+```
+
+Fit & plot:
+
+```python
+histgaus.Fit(root_triangle, "SR")
+histgaus.Draw()
+c1.Draw()
+```
+
 ### Exercise from `005_exercise_fitting_with_root.ipynb`
 
 Try Gaussian + Exponential:
