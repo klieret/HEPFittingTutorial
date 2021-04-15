@@ -311,3 +311,22 @@ be smaller than 3!
 ### Question 7e
 
 The values below the contour (with significance values higher than 1.64) are excluded.
+
+### Exercise 7f
+
+To get the expected limit for twice the luminosity, you have to scale up both
+the data and the background histograms by a factor of 2. You can do that by
+replacing
+
+`signal["data"]` with `2 * np.array(signal["data"])`
+
+and
+
+`b_9bins` with `2 * np.array(b_9bins)`
+
+in the code cell that does the grid scan.
+
+To get the discovery p-value 3 $\sigma$ contour instead, replace `"qtilde"` by
+`"q0"`, change the test value of the POI from 1 to 0, set the observed data to
+the sum of signal + background, `list(np.array(signal["data"]) +
+np.array(b_9bins))` and change the contour level from `1.64` to `3`.
