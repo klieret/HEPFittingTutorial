@@ -1,0 +1,16 @@
+name: HEPFittingTutorial
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - conda-ecosystem-user-package-isolation
+  - root
+  - pip:
+      - jupyter
+      - pandas
+      - scipy
+      - numpy
+      - pyroofit
+      - pyhf[contrib]
+      - iminuit
+      - mplhep
