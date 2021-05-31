@@ -2,11 +2,11 @@
 
 Originally by [Kilian Lieret](https://github.com/klieret)
 
-Jupyter notebooks preview is available [here](https://nbviewer.jupyter.org/github/nikoladze/HEPFittingTutorial/tree/master/examples/jupyter_notebooks/).
+Jupyter notebooks preview is available [here](https://nbviewer.jupyter.org/github/klieret/HEPFittingTutorial/tree/master/examples/jupyter_notebooks/).
 
 To run the tutorial, just click on:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nikoladze/HEPFittingTutorial/master?filepath=examples%2Fjupyter_notebooks)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/klieret/HEPFittingTutorial/master?filepath=examples%2Fjupyter_notebooks)
 
 
 
