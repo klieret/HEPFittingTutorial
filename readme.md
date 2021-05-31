@@ -1,5 +1,8 @@
 # HEP Fitting Tutorial
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 Originally by [Kilian Lieret](https://github.com/klieret)
 
 Jupyter notebooks preview is available [here](https://nbviewer.jupyter.org/github/klieret/HEPFittingTutorial/tree/master/examples/jupyter_notebooks/).
@@ -7,8 +10,6 @@ Jupyter notebooks preview is available [here](https://nbviewer.jupyter.org/githu
 To run the tutorial, just click on:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/klieret/HEPFittingTutorial/master?filepath=examples%2Fjupyter_notebooks)
-
-
 
 ## Contents
 
@@ -18,7 +19,6 @@ To run the tutorial, just click on:
 * Template fits using ``pyroofit``
 * Histogram template fits using ``pyhf``
 * Hypothesis tests with ``pyhf``
-
 
 ## Setup instructions
 
@@ -79,3 +79,16 @@ pip install --user --upgrade pyroofit pyhf iminuit mplhep
 ```
 
 Then you should be able to run the examples in a jupyter notebook.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
