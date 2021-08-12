@@ -3,10 +3,11 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/klieret/HEPFittingTutorial/master?filepath=examples%2Fjupyter_notebooks)
+[![License](https://img.shields.io/github/license/klieret/HEPFittingTutorial.svg)](https://github.com/klieret/HEPFittingTutorial/blob/master/LICENSE.txt)
+[![PR welcome](https://img.shields.io/badge/PR-Welcome-%23FF8300.svg)](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project)
 
-Originally by [Kilian Lieret](https://github.com/klieret)
+## The material
 
 Jupyter notebooks preview is available [here](https://nbviewer.jupyter.org/github/klieret/HEPFittingTutorial/tree/master/examples/jupyter_notebooks/).
 
